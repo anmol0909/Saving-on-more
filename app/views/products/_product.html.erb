@@ -1,0 +1,18 @@
+<div class="col-lg-4 col-sm-6">
+  <div class="card hovercard">
+    <div class="cardheader">
+    </div>
+    <div class="avatar">
+      <%= build_image_path(product.image) %> 
+    </div>
+    <div class="info">
+      <div class="title">
+        <%= product.item_name %>
+      </div>
+      <!-- <div class="desc"><%#= product.item_name %></div> -->
+      <div class="desc" style="margin-top: 10px;">Item #: <%= product.item_number %> </div>
+      <div class="desc">UPC: <%= product.item_upc %></div>
+    </div>
+  </div>
+</div>
+

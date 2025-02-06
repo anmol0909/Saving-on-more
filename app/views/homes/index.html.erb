@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <body data-spy="scroll" data-target="#navbar-example">
+    <!-- <div id="preloader"></div> -->
+    <div id="home" class="slider-area">
+      <div class="bend niceties" style="
+      background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(<%= slider_image_path(@homes) %>);
+        background-size: cover;
+        height: 100vh;">
+       
+          <div class="centered home-box-fadein fade-in">
+            <div class="layer-1-2" >
+              <h1 class="">S.O.M. Products</h1>
+              <h5 class="header-bar-color" style="letter-spacing: 0.2em;">Save Without Compromising Quality</h5>
+            </div>
+            <a class="btn btn-default btn-default-design-color" href="/contacts/new#/contacts/new">GET IN TOUCH </a>
+          </div>
+      </div>
+    </div>
+
+    <div id="portfolio-category" class="portfolio-area area-padding-home fix">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center fade-in-div-box">
+              <h2>Categories</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <%= render 'categories/category' %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

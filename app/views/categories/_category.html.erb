@@ -1,0 +1,25 @@
+<div class="awesome-project-content">
+  <% @categories.each do |category| %>
+      <!-- single-awesome-project start -->
+    <div class="fade-in-div-box col-md-4 col-sm-4 col-xs-12 <%= category.name.downcase %>">
+      <a href="<%= category_path(category.id) %>">
+        <div class="single-awesome-project-1">
+          <div class="awesome-img-1" style="
+          background: 
+              linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+              ),
+              url(<%= url_for(category.image) %>);
+              background-size: cover;
+              height: 30vh;">
+              <p></p>
+              <div class="text-block">
+              <h5><%= category.name %></h5>
+              </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>

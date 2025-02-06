@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Include your CSS and other head elements here -->
+</head>
+<body>
+
+<div id="about" class="about-area area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h3>​Contact us for buying, selling and appointments!<br>
+            Simply click on the email below or fill out the form.</h3>
+        </div>
+      </div>
+    </div>
+      <br>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <!-- Left column for emails -->
+        <div class="email-list">
+          <p><b>Emails:</b></p>
+          <p><a href="mailto:info@savingonmore.com">info@savingonmore.com</a></p>
+          <!-- Add more email addresses as needed -->
+          <p><b>Warehouse Address:</b></p>
+          <p>4545 Spring Valley Road Suite B02, TX
+          75025</p>
+          <p><b>Office:</b></p>
+          <p><a href="tel:(469) 656-8382" href="#">(469) 656-8382</a></p>
+        </div>
+      </div>
+     
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <!-- Right column for the contact form -->
+        <% if params[:notice] %>
+          <p class="alert alert-success"><%= params[:notice] %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= form_for @contact, url: contacts_path do |f| %>
+          <% if @contact.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+              <ul>
+                <% @contact.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="col-xs-6 form-group">
+            <%= f.label :first_name %><br>
+            <%= f.text_field :first_name, class: "form-control" %>
+          </div>
+
+          <div class="col-xs-6 form-group">
+            <%= f.label :last_name %><br>
+            <%= f.text_field :last_name, class: "form-control" %>
+          </div>
+          
+          <div class="col-xs-6 form-group">
+            <%= f.label :email %><br>
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+
+          <div class="col-xs-6 form-group">
+            <%= f.label :phone_number %><br>
+            <%= f.text_field :phone_number, class: "form-control" %>
+          </div>
+
+          <div class="col-xs-12">
+            <%= f.label :write_a_message %><br>
+            <%= f.text_area :message, class: "form-control" %>
+          </div>
+          
+          <div class="actions">
+            <%= f.submit "Submit", class: "col-xs-6 form-group btn btn-primary btn-primary-design-color", style: "float: right; margin: 11px" %><br><br>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include your scripts and other body elements here -->
+
+</body>
+</html>
+<%= render 'css' %>

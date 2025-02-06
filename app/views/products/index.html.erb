@@ -1,0 +1,62 @@
+<!-- Start portfolio Area -->
+<div id="about" class="about-area area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+        <!-- <h2>Products </h2> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="awesome-project-content">
+        <div class="btn-group">
+          <div class="col-xs-12">
+          <h5>Filters By Categories:</h5><a class="btn btn-primary white-btn" style="margin: 0px 4px 3px 1px" href="/products"> <%= 'Reset Filters' %> </a>
+            <% @categories.each do |category|%>
+              <% if @seleted_category_id == category.id.to_s  %>
+                <a class="btn btn-primary btn-primary-design-color" style="margin: 0px 4px 3px 1px" href="/products?category_id=<%= category.id %>"> <%= category.name %> </a>
+              <% else %>
+                <a class="btn btn-primary white-btn" style="margin: 0px 4px 3px 1px" href="/products?category_id=<%= category.id %>"> <%= category.name %> </a>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="awesome-project-content">
+        <% @products.each do |product| %>
+          <%= render partial: 'products/product', locals: { product: product }%>
+        <% end %>
+
+        <% if @products.count == 0 %>
+          <div class="col-lg-4 col-sm-6">
+            <div class="card hovercard">
+              <div class="cardheader">
+              </div>
+              <div class="avatar">
+                
+              </div>
+              <div class="info">
+                <div class="title">
+                </div>
+                <!-- <div class="desc"></div> -->
+                <div class="desc" style="margin-top: 10px;"></div>
+                <div class="desc">No Record Found</div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="digg_pagination" style="text-align: center;">
+        <%= will_paginate @products %>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<%= render partial: 'products/css-2' %>

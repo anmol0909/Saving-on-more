@@ -1,0 +1,65 @@
+<div id="about" class="about-area area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h2>Registration</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <%= form_for @registration, url: registrations_path do |f| %>
+        <% if @registration.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+            <ul>
+              <% @registration.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <label for="business_legal_entity_name">Business Legal Entity Name:</label><br>
+        <%= f.text_field :business_legal_entity_name, class: "form-control" %><br>
+
+        <label for="billing_street_address">Billing Street Address:</label><br>
+        <%= f.text_field :billing_street_address, class: "form-control" %><br>
+
+        <label for="billing_city">Billing City:</label><br>
+        <%= f.text_field :billing_city, class: "form-control" %><br>
+
+        <label for="billing_state">Billing State:</label><br>
+        <%= f.text_field :billing_state, class: "form-control" %><br>
+
+        <label for="billing_zip_code">Billing Zip Code:</label><br>
+        <%= f.text_field :billing_zip_code, class: "form-control" %><br>
+
+        <label for="accounts_payable_contact">Accounts Payable Contact:</label><br>
+        <%= f.text_field :accounts_payable_contact, class: "form-control" %><br>
+
+        <label for="accounts_payable_phone_number">Accounts Payable Phone Number:</label><br>
+        <%= f.text_field :accounts_payable_phone_number, class: "form-control" %><br>
+
+        <label for="shipping_address">Shipping Address:</label><br>
+        <%= f.text_field :shipping_address, class: "form-control" %><br>
+
+        <label for="shipping_city">Shipping City:</label><br>
+        <%= f.text_field :shipping_city, class: "form-control" %><br>
+
+        <label for="shipping_state">Shipping State:</label><br>
+        <%= f.text_field :shipping_state, class: "form-control" %><br>
+
+        <label for="shipping_zip_code">Shipping Zip Code:</label><br>
+        <%= f.text_field :shipping_zip_code, class: "form-control" %><br>
+
+        <label for="business_phone_number">Business Phone Number:</label><br>
+        <%= f.text_field :business_phone_number, class: "form-control" %><br>
+
+        <label for="sales_tax_permit">Sales Tax Permit:</label><br>
+        <%= f.file_field :sales_tax_permit %><br><br>
+
+        <%= f.submit 'Register', class: "btn btn-primary" %><br><br>
+      <% end %>
+    </div>
+  </div>
+</div>

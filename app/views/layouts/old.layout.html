@@ -1,0 +1,59 @@
+<!-- Logo Container on the Left -->
+<div class="logo-container" style="margin: 10px 0 10px 340px;" >
+    <a href="/">
+      <img src="/assets/LOGO.png" alt="Great Discounters Logo" width="250" class="d-none d-md-block">
+    </a>
+  </div>
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brown" style="background-color: #464646;">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
+          <ul class="navbar-nav">
+            <!-- Navbar links with white text color -->
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                <!-- Add your category links dynamically here -->
+                <% Category.all.each do |category| %>
+                  <a class="dropdown-item" href="/categories/<%= category.id %>"><%= category.name %></a>
+                <% end %>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sells">Sell to Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/buys">Buy from Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registrations/new">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacts/new">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Content -->
+    <%= yield %>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="contact-details">
+        Contact us at: example@email.com |<br>Phone: (123) 456-7890 |<br> Address: 123 Main St, City <br>
+      </div>
+      &copy; 2023 SavingOnMore. All rights reserved.
+    </div>

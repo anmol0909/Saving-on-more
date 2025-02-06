@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h2>New Contact Form Submission</h2>
+  <p>
+    <strong>Name:</strong> <%= @contact.first_name %> <%= @contact.last_name %><br>
+    <strong>Email:</strong> <%= @contact.email %><br>
+    <strong>Phone Number:</strong> <%= @contact.phone_number %><br>
+    <strong>Message:</strong><br>
+    <%= @contact.message %>
+  </p>
+</body>
+</html>

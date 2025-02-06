@@ -1,0 +1,273 @@
+<header>
+<!-- header-area start -->
+  <div id="sticker" class="header-area stick">
+    <div class="header-area-custo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <!-- Navigation -->
+          <nav class="navbar-1">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="header-top-location">
+              <a href="tel:(469) 656-8382" class="header-bar-color" href="#">
+                <span><i class="fa fa-phone" aria-hidden="true"></i> (469) 656-8382 </span>
+              </a>
+              <a class="header-bar-color" href="#" style="float: right;">
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i> 4545, Spring Valley Rd, Farmers Branch, TX, 75244 </span>
+              </a>
+            </div>
+           
+            <!-- navbar-collapse -->
+          </nav>
+          <!-- END: Navigation -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sticker-1" class="header-area-1 header-area-custo-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+
+          <!-- Navigation -->
+          <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              <!-- Brand -->
+              <a class="navbar-brand page-scroll sticky-logo" href="/">
+              <!-- <h1>Saving<span>on</span>More</h1>  -->
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <img src="<%= asset_path('logo.png')%>" alt="" title="" style="width: 180px">
+              </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="<%= active_class('/') %>">
+                  <a class="" href="/">  <i class="fa fa-home" aria-hidden="true"> </i> Home</a>
+                </li>
+                <li class="<%= active_class('/about_us/index') %>">
+                  <a class="" href="/about_us/index"> <i class="fa fa-info-circle" aria-hidden="true"> </i> About Us</a>
+                </li>
+                <li class="<%= active_class('/products') %>">
+                  <a class="" href="/products"> <i class="fa fa-product-hunt" aria-hidden="true"> </i> Products</a>
+                </li>
+                <li class="<%= active_class('/contacts/new') %>">
+                  <a class="" href="/contacts/new"> <i class="fa fa-phone" aria-hidden="true"> </i> Contact Us</a>
+                </li>
+               
+              </ul>
+            </div>
+            <!-- navbar-collapse -->
+          </nav>
+          <!-- END: Navigation -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- header-area end -->
+</header>
+<!-- header end -->
+
+
+<style>
+  .header-area {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* background: #fff; */
+    z-index: 9;
+  }
+  .main-menu ul.navbar-nav li a {
+    color: #005F4E;
+  }
+
+  .header-bar-color {
+    color: #fff;
+  }
+
+  .header-bar-color p {
+    color: #fff;
+  }
+  
+  .header-top-location a:hover {
+    color: #fff;
+  }
+
+  .header-top-location a:focus {
+    color: #fff;
+  }
+
+  .header-top-location::after {
+    color: #fff;
+  }
+
+  /* .header-bar-color a:hover, .alert a:focus { color: white; } */
+
+  .header-area-custo {
+    height: 35px;
+    padding: 6px;
+  }
+  .navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0 !important;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .main-menu li {
+    /* border-right: 1px solid #005F4E; */
+  }
+  .main-menu li:last-child {
+    /* border-right: none */
+  }
+
+  .header-area-custo-2 {
+    background: #fff;
+    height: 70px;
+  }
+  .btn-default-design-color {
+    color: #fff ;
+    border-color: #ccc;
+    font-size: large;
+    background-color: transparent;
+  }
+  .btn-primary-design-color {
+    background-color: #005F4E;
+    border-color: #005F4E;
+    border-radius: 0px;
+  }
+
+  .btn-primary-design-color:hover {
+    background-color: #005F4E;
+    border-color: #005F4E;
+  }
+  .btn-default:hover{
+    background-color: #fff;
+    border-radius: 0px;
+  }
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.opacity-header {
+  /* opacity: 0.7; */
+  /* background: #444 none repeat scroll 0 0; */
+  /* content: ""; */
+  height: 70%;
+  left: 0;
+  opacity: 0.8;
+  /* position: absolute; */
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  text-align: center;
+  width: 90%;
+}
+.text-block h5 {
+  color: #fff;
+}
+.text-block p {
+  color: #fff;
+}
+
+.single-awesome-project-boarder {
+  border: 1px solid #005F4E;
+  border-radius: 0px;
+  min-height: 450px;
+}
+
+.white-btn {
+  background-color: #fff;
+  border-color: grey;
+  border-radius: 0px;
+  color: #005F4E;
+}
+
+.white-btn:hover {
+  background-color: #005F4E;
+  border-color: #005F4E;
+  color: #fff;
+}
+
+.layer-1-2 {
+  text-transform: uppercase;
+}
+
+.fade-in-div-box {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-div-box.show {
+  opacity: 1;
+}
+
+.cate-fade-in-div-box {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.cate-fade-in-div-box.show {
+  opacity: 1;
+}
+
+/* .fade-in-div-box {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-div-box.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+</style>
